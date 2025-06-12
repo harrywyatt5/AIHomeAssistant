@@ -1,0 +1,8 @@
+websockets
+openai
+SpeechRecognition
+PyAudio
+pyttsx3
+python-dotenv
+aiofiles
+AudioConverter

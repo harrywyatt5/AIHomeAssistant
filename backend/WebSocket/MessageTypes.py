@@ -1,0 +1,11 @@
+import enum
+
+class MessageTypes(enum.Enum):
+    BASE_MESSAGE = 0
+    CLIENT_START_RECORDING = 1 # ACK is the same message ID
+    CLIENT_END_RECORDING = 2
+    CLIENT_ACK_END_RECORDING = 3
+    CLIENT_READY_TO_SEND = 4
+    CLIENT_START_RECEIVE_AUDIO = 5
+    CLIENT_ACK_RECEIVE_AUDIO = 6
+    CLIENT_FINISHED = 7

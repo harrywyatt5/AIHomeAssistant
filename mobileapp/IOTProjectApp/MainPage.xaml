@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IOTProjectApp.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="500" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="40" />
+        </Grid.ColumnDefinitions>
+        
+        <Label
+            Grid.Column="1"
+            Text="Type in a WebSocket URI to connect to"
+            Style="{StaticResource SubHeadline}"
+            FontSize="18"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Type in a WebSocket URI to connect to" />
+        
+        <Entry
+            Grid.Column="1"
+            Grid.Row="1"
+            x:Name="URIField" 
+            Placeholder="Type the URI here" />
+        
+        <Button
+            Grid.Column="1"
+            Grid.Row="2"
+            x:Name="ConnectBtn"
+            Text="Connect" 
+            SemanticProperties.Hint="Click to connect to WebSocket"
+            Clicked="OnCounterClicked"
+            HorizontalOptions="Fill" />
+        
+        <Label
+            Grid.Column="1"
+            Grid.Row="4"
+            x:Name='StateLabel'
+            Text=""
+            IsVisible="True"
+            FontSize="8"
+            TextColor="Black"
+        />
+    </Grid>
+
+</ContentPage>
